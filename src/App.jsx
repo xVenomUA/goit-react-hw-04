@@ -8,7 +8,6 @@ import { ReactAlarm } from "./Components/ReactAlarm/ReactAlarm";
 import toast from "react-hot-toast";
 import { LoadMore } from "./Components/LoadMore/LoadMore";
 import { ImageModal } from "./Components/ImageModal/ImageModal";
-// import { ImageModal } from "./Components/ImageModal/ImageModal";
 
 export const App = () => {
   const [loading, setLoading] = useState(false);
@@ -85,7 +84,6 @@ export const App = () => {
 
   const onClickModal = (e) => {
     const id = e.target.dataset.id;
-    console.log(id);
     setDataPhotoModal(photoData.find((el) => el.id === id));
     openModal();
   };
