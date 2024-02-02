@@ -5,10 +5,22 @@ const BASE_URL = "https://api.unsplash.com";
 export const searchByQuery = async (query) => {
   const option = new URLSearchParams({
     query,
-    per_page: 20,
+    per_page: 30,
     client_id: API_KRY,
     orientation: "landscape",
   });
   const response = axios.get(`${BASE_URL}/search/photos?${option}`);
   return response;
 };
+
+export const searchByPage = async (query, page) => {
+  const option = new URLSearchParams({
+    query,
+    per_page: 30,
+    page,
+    client_id: API_KRY,
+    orientation: "landscape",
+  });
+  const response = axios.get(`${BASE_URL}/search/photos?${option}`);
+  return response;
+}
