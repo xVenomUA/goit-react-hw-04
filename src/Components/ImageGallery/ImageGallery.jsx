@@ -6,7 +6,7 @@ export const ImageGallery = ({ photoData, onClickModal }) => {
     <ul className={css.list}>
       {photoData.map((data) => {
         return (
-          <li key={data.id} className={css.card} onClick={onClickModal}>
+          <li key={data.id} className={css.card} onClick={() => onClickModal(data.id)}>
             <ImageCard data={data} />
           </li>
         );
